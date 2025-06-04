@@ -1,0 +1,76 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食蛇龜介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: darkkhaki;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        .image-container {
+            width: 50%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-container {
+            width: 50%;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: chocolate;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h1>食蛇龜介紹</h1>
+            <p>食蛇龜（Cuora flavomarginata），又稱黃緣閉殼龜，是台灣特有的陸龜品種之一。牠們主要棲息在台灣中部和南部的森林地區，喜歡濕潤的環境。食蛇龜因其能夠吃蛇而得名，但牠們的主要食物包括昆蟲、蠕蟲、小型無脊椎動物及植物。
+            <br></br>
+            食蛇龜的外形特徵包括橢圓形的龜殼，殼背為黑色或暗褐色，邊緣有明顯的黃色或黃橙色條紋，因此得名“黃緣閉殼龜”。成年的食蛇龜體長約15到20公分，具有強壯的四肢和爪子，適合挖掘和攀爬。
+            <br></br>
+            由於棲地破壞、非法捕捉和買賣，食蛇龜的數量逐年減少，目前已被列為保育類動物。保護食蛇龜的工作包括加強棲地保護、打擊非法交易以及進行繁殖和野放計劃，這些措施對於維持食蛇龜的野生族群至關重要。
+        </p>
+            <button onclick="goBack()">Back</button>
+        </div>
+        <div class="image-container">
+            <img src="食蛇龜.jpg" alt="食蛇龜">
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

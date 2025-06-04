@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臺灣黑熊介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: darkkhaki;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        .image-container {
+            width: 50%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-container {
+            width: 50%;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: chocolate;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<script>
+    function playSound() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+    </script>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h1>臺灣黑熊介紹</h1>
+            
+
+            <p>臺灣黑熊（學名：Ursus thibetanus formosanus，布農語：tumaz、賽夏語：somay、泰雅語：ngarox、德路固語：kumay、鄒語：cmoi、卡那卡那富語：cumai、排灣語：cumay），俗稱：狗熊、月熊。是臺灣特有的亞洲黑熊亞種（臺灣唯一性的原生熊類[1]），胸前的V字型白色條紋（太魯閣語稱做 rabang）是亞洲黑熊共有的特徵。台灣黑熊現存族群數量約為200－600隻[2]，出沒於台灣中央山脈海拔1,000公尺－3,500公尺的山區，活動範圍可達560平方公里。早在1932年日本探險家堀川安市所著的《台灣哺乳類動物圖說》中，因土地開發導致棲息地喪失，臺灣黑熊的數量正在下降中。在1989年依照中華民國《野生動物保育法》，台灣黑熊被列為瀕危。2001年台灣黑熊被選為台灣最具代表性的野生動物，現今不少台灣公司、企業、政府機關，都選用台灣黑熊作為吉祥物，是著名的台灣意象之一。</p>
+            <button onclick="goBack()">Back</button>
+        </div>
+        <div class="image-container">
+            <img src="臺灣黑熊.jpg" alt="臺灣黑熊">
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

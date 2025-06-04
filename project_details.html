@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>專案詳情</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .form-group {
+            border: 2px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            margin-bottom: 20px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>專案詳情</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="campaigns.html">募款活動</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+                <li><a href="create_project.html">發起專案</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="project-details">
+            <h2>填寫專案詳情</h2>
+            <form id="projectDetailsForm">
+                <div class="form-group">
+                    <label for="projectName">專案名稱（勿超過12個字）<span style="color: red;">*</span></label>
+                    <input type="text" id="projectName" name="projectName" maxlength="12" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">專案簡介<span style="color: red;">*</span></label>
+                    <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="goalAmount">目標金額 (NT$)<span style="color: red;">*</span></label>
+                    <input type="number" id="goalAmount" name="goalAmount" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">開始時間<span style="color: red;">*</span></label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="taxReceipt">是否提供抵稅收據<span style="color: red;">*</span></label>
+                    <select id="taxReceipt" name="taxReceipt" required>
+                        <option value="yes">是</option>
+                        <option value="no">否</option>
+                    </select>
+                </div>
+                <button type="submit">提交專案詳情</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 募款平台. 保留所有權利.</p>
+    </footer>
+</body>
+</html>

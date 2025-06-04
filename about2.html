@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣山椒魚介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: darkkhaki;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        .image-container {
+            width: 50%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-container {
+            width: 50%;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: chocolate;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h1>台灣山椒魚介紹</h1>
+            <p>台灣山椒魚（Hynobius formosanus）是台灣特有的兩棲類動物，屬於山椒魚科。牠們主要分布在台灣中部和北部的高山地區，尤其是在海拔1000到3000公尺之間的森林和溪流附近。台灣山椒魚喜愛棲息於潮濕的環境中，繁殖季節通常在春季，雌山椒魚會在水中產卵。
+            <br></br>
+            台灣山椒魚的體型較小，成年體長約10到15公分，皮膚光滑，顏色多為深褐色或黑色，有時伴有不規則的斑點或條紋。牠們的外形與其他山椒魚相似，但因為是台灣特有種，具有獨特的生態和演化價值。
+            <br></br>
+            由於棲地破壞和環境污染，台灣山椒魚的數量逐漸減少，現已被列為保育類動物。
+        </p>
+            <button onclick="goBack()">Back</button>
+        </div>
+        <div class="image-container">
+            <img src="山椒魚.jpg" alt="山椒魚">
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

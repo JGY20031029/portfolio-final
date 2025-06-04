@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>琉球狐蝠介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: darkkhaki;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        .image-container {
+            width: 50%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-container {
+            width: 50%;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: chocolate;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<script>
+    function playSound() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+    </script>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h1>琉球狐蝠介紹</h1>
+            
+
+            <p>琉球狐蝠（學名：Pteropus dasymallus）為一種分布於琉球群島、菲律賓群島和台灣島的大型蝙蝠，展翼可達1公尺，身長約20公分，體重350至550公克。其並不使用超音波定位，而是依照視覺與嗅覺尋找食物，以植物的果實、花朵、嫩葉為主食。住在樹上，而非陰暗的洞穴。由於數量稀少，於琉球及台灣都列入保護。該物種的模式產地在琉球群島。</p>
+            <button onclick="goBack()">Back</button>
+        </div>
+        <div class="image-container">
+            <img src="台灣狐蝠.jpg" alt="琉球狐蝠">
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

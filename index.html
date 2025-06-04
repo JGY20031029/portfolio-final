@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動物主題</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .heart {
+            cursor: pointer;
+            color: grey;
+        }
+        .heart.liked {
+            color: red;
+        }
+        .menuimg {
+            width: 70%;
+        }
+        .header.hide {
+            display: none;
+        }
+        #menuleft {
+            display: none;
+        }
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+        .comment-section {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .comment-section h2 {
+            margin-bottom: 10px;
+        }
+        .comment-form textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .comment-form button {
+            display: block;
+            margin: 0 auto;
+        }
+        .comments-list {
+            margin-top: 20px;
+        }
+        .comment {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .ranking-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+        .ranking-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            z-index: 1000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .ranking-popup h2 {
+            margin: 0 0 10px 0;
+        }
+        .ranking-popup ol {
+            padding-left: 20px;
+        }
+        .ranking-popup ol li {
+            margin-bottom: 5px;
+        }
+        .ranking-popup-close {
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <a href="about1.html"></a>
+    <div class="header">
+        <div id="menu">
+            <img class="menuimg" src="./img/menu.svg" alt="">
+        </div>
+        <div class="logodiv">
+            <p class="logop"><a style="text-decoration:none;" href="首頁.html">logo</a></p>
+        </div>
+        <div class="menutext">
+            <h1>綠動-北部</h1>
+        </div>
+        <div class="logindiv">
+            <button id="ranking-button"><a style="text-decoration:none;" href="#">
+                <p style="color: white;font-size: 1.2em;">熱門動物</p>
+            </a></button>
+        </div>
+    </div>
+
+    <div class="div1">
+        <div id="menuleft">
+            <div class="menuheader">
+                <div id="menu">
+                    <img class="menuimg" src="./img/menu.svg" alt="">
+                </div>
+                <div class="logodiv">
+                    <p class="logop"><a style="text-decoration:none;" href="">logo</a></p>
+                </div>
+            </div>
+            <div style="display: flex; flex-grow: 1; flex-direction: column; align-items: center;">
+                <a style="text-decoration: none;" href="index.html"><button class="menuitem"><p style="color: white;">北部</p></button></a>
+                <a style="text-decoration: none;" href="b中部.html"><button class="menuitem"><p style="color: white;">中部</p></button></a>
+                <a style="text-decoration: none;" href="b南部.html"><button class="menuitem"><p style="color: white;">南部</p></button></a>
+                <a style="text-decoration: none;" href="b東部.html"><button class="menuitem"><p style="color: white;">東部</p></button></a>
+                <a style="text-decoration: none;" href="b離島.html"><button class="menuitem"><p style="color: white;">離島地區</p></button></a>
+            </div>
+        </div>
+
+        <div id="menuright">
+            <div style="flex-grow: 1;">
+                <div class="carousel">
+                    <div class="carousel_left"><img src="./img/index_img/carousel/left.svg" alt=""></div>
+                    <div class="carousel_right"><img src="./img/index_img/carousel/right.svg" alt=""></div>
+                    <div class="carousel_in">
+                        <div class="carousel_img">
+                            <div class="marquee">
+                                <div class="marquee-content">
+                                    <h4>保育動物人人有責</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro">
+                    <div style="display:flex; justify-content:center">
+                        <h1 class="introh2">北部瀕危動物</h1>
+                    </div>
+                    <div class="intro_change">
+                        <a href="about4.html">
+                            <div class="intro_in">
+                                <img src="草鴞.png" alt="">
+                                <div class="intro_in_text">
+                                    <h2>草鴞</h2>
+                                    <p class="intro_p">fdsfsdfdsffdsfdsfdsfdsfdsfds</p>
+                                    <span class="heart" data-id="1">❤</span>
+                                    <span class="count" id="count-1">0</span> 次喜歡
+                                </div>
+                            </div>
+                        </a>
+                        <a href="about3.html">
+                            <div class="intro_in">
+                                <img src="食蛇龜.png" alt="">
+                                <div class="intro_in_text">
+                                    <h2>食蛇龜</h2>
+                                    <p>fdsfsdfdsf</p>
+                                    <span class="heart" data-id="2">❤</span>
+                                    <span class="count" id="count-2">0</span> 次喜歡
+                                </div>
+                            </div>
+                        </a>
+                        <a href="about2.html">
+                            <div class="intro_in">
+                                <img src="山椒魚.png" alt="">
+                                <div class="intro_in_text">
+                                    <h2>山椒魚</h2>
+                                    <p>fdsfsdfdsf</p>
+                                    <span class="heart" data-id="3">❤</span>
+                                    <span class="count" id="count-3">0</span> 次喜歡
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Comment Section Start -->
+                <div class="comment-section">
+                    <h2>留言區</h2>
+                    <div class="comment-form">
+                        <textarea id="comment-text" placeholder="請留下您的留言"></textarea>
+                        <button id="submit-comment">提交留言</button>
+                    </div>
+                    <div class="comments-list" id="comments-list">
+                        <!-- Comments will be appended here -->
+                    </div>
+                </div>
+                <!-- Comment Section End -->
+
+            </div>
+        </div>
+    </div>
+    <div class="ranking-popup" id="ranking-popup">
+        <button class="ranking-popup-close" id="ranking-popup-close">關閉</button>
+        <ol id="ranking-list"></ol>
+    </div>
+    <script>
+        $(document).ready(function() {
+            const items = [
+                { id: 1, name: '草鴞', likes: 0 },
+                { id: 2, name: '食蛇龜', likes: 0 },
+                { id: 3, name: '山椒魚', likes: 0 },
+            ];
+        
+            // Function to update the ranking and display in the popup
+            function updateRankingPopup() {
+                items.sort((a, b) => b.likes - a.likes);
+                const rankingList = $('#ranking-list');
+                rankingList.empty();
+                items.forEach(item => {
+                    const li = $('<li>').text(`${item.name}: ${item.likes} 次喜歡`);
+                    rankingList.append(li);
+                });
+                $('#ranking-popup').show(); // Display the popup after updating
+            }
+        
+            // Function to update the likes count and ranking
+            function updateLikesAndRanking(id) {
+                const item = items.find(item => item.id === id);
+                const countElement = $(`#count-${id}`);
+                let count = parseInt(countElement.text());
+                count++;
+                countElement.text(count);
+                item.likes = count;
+                localStorage.setItem(`like-count-${id}`, count);
+            }
+        
+            // Load likes and heart states from local storage
+            $('.heart').each(function() {
+                const id = $(this).data('id');
+                const count = localStorage.getItem(`like-count-${id}`) || 0;
+                $(`#count-${id}`).text(count);
+                items.find(item => item.id === id).likes = parseInt(count);
+                
+                // Check if the heart was liked
+                if (localStorage.getItem(`liked-${id}`) === 'true') {
+                    $(this).addClass('liked');
+                }
+            });
+        
+            // Heart click event
+            $('.heart').click(function() {
+                const id = $(this).data('id');
+                $(this).addClass('liked');
+                localStorage.setItem(`liked-${id}`, true);
+                updateLikesAndRanking(id);
+            });
+        
+            // Ranking popup close button
+            $('#ranking-popup-close').click(function() {
+                $('#ranking-popup').hide();
+            });
+        
+            // Toggle ranking popup visibility
+            $('#ranking-button').click(function() {
+                updateRankingPopup();
+            });
+        
+            // Menu hover effect
+            let isMenuEnlarged = false;
+            $('#menu').hover(
+                function() {
+                    if (!isMenuEnlarged) {
+                        $('.menuimg').css('width', '80%');
+                        isMenuEnlarged = true;
+                    }
+                },
+                function() {
+                    if (isMenuEnlarged) {
+                        $('.menuimg').css('width', '70%');
+                        isMenuEnlarged = false;
+                    }
+                }
+            );
+        
+            // Menu toggle
+            let isMenuVisible = false;
+            $('#menu').click(function() {
+                $('#menuleft').toggle();
+                isMenuVisible = !isMenuVisible;
+            });
+        
+            // Header visibility on scroll
+            let previousScrollPosition = $(document).scrollTop();
+            $(window).scroll(function() {
+                const currentScrollPosition = $(document).scrollTop();
+                if (currentScrollPosition > previousScrollPosition) {
+                    $('.header').addClass('hide');
+                } else {
+                    $('.header').removeClass('hide');
+                }
+                previousScrollPosition = currentScrollPosition;
+            });
+        
+            // Load comments from local storage when the page loads
+            function loadCommentsFromStorage() {
+                const comments = JSON.parse(localStorage.getItem('comments')) || [];
+                comments.forEach(comment => {
+                    const commentHTML = `<div class="comment"><p>${comment}</p></div>`;
+                    $('#comments-list').append(commentHTML);
+                });
+            }
+        
+            loadCommentsFromStorage();
+        
+            // Function to update and save comments to local storage
+            function updateAndSaveComments(commentText) {
+                const comments = JSON.parse(localStorage.getItem('comments')) || [];
+                comments.push(commentText);
+                localStorage.setItem('comments', JSON.stringify(comments));
+            }
+        
+            // Comment submission
+            $('#submit-comment').click(function() {
+                const commentText = $('#comment-text').val();
+                if (commentText.trim()) {
+                    const commentHTML = `<div class="comment"><p>${commentText}</p></div>`;
+                    $('#comments-list').append(commentHTML);
+                    $('#comment-text').val(''); // Clear the textarea
+        
+                    // Save comment to local storage
+                    updateAndSaveComments(commentText);
+                }
+            });
+        });
+        </script>
+        
+</body>
+</html>

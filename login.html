@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        /* Additional styles for the back-to-home button */
+        .back-to-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(247, 191, 191, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .circleImg {
+  border-radius: 200px;
+  width: 280px;
+  height:280px;
+}
+        form{
+            position: relative;
+            top: 200px;
+            background:linear-gradient(45deg,rgba(230,120,20,20),white,orange);
+            margin: 0 auto;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            width: 50vw;
+            height: 55vh;
+            font-size: 1.25rem;
+            box-shadow: 2rem 2rem 1.5rem gray;
+            border-radius: 1rem;
+
+        }
+        form input{
+            margin: 1rem 0;
+        }
+        body{
+            background:linear-gradient(45deg,(rgb(133, 192, 243),white,yellow));
+            background-image: url(LINE_ALBUM_耶_230110_40.jpg);
+            background-size: cover;
+        }
+        span{
+            color: rgb(13, 67, 111);
+        }
+    </style>
+</head>
+<body>
+    <a href="首頁.html" class="back-to-home">回首頁</a>
+
+    <form action="" method="">
+        <h2>註冊</h2>
+    <div>
+        請輸入名字
+        <input
+        type="text"
+        name=""
+        id=""
+        value=""
+        placeholder="姓氏"
+        maxlength="10"
+        size="50%"
+        required
+        />
+    </div>
+    <div>
+        帳號
+     <input type="mail" name="" id="" value="" placeholder="請輸入email" maxlength="" size="50%" required>    
+    </div>
+    <div>
+        密碼
+        <input type="password" name="" id="" value="" placeholder="請輸入密碼" maxlength="" size="50%" required>
+    </div>
+    <div>
+        生日
+        <input type="date" name="" id="" value="" placeholder="請輸入密碼" maxlength="" size="50%" required>
+    </div>
+    <div>
+        <span>目前身分</span>
+        <input type="radio" name="score" id="" value="學生"><span>學生</span>
+        <input type="radio" name="score" id="" value="上班族"><span>上班族</span>
+        <input type="radio" name="score" id="" value="退休"><span>自由業</span>
+    </div>
+    <!-- <div>
+        <span>喜愛球類運動</span>
+        <input type="checkbox" name="" id="" value="籃球" ><span>籃球</span>
+        <input type="checkbox" name="" id="" value="排球" ><span>排球</span>
+        <input type="checkbox" name="" id="" value="保齡球" ><span>保齡球</span>
+        <input type="checkbox" name="" id="" value="撞球" ><span>撞球</span>
+        <input type="checkbox" name="" id="" value="羽球" ><span>羽球</span>
+        <input type="checkbox" name="" id="" value="其他" ><span>其他</span>
+    </div> -->
+    <!-- <div>
+        <span>球具花費</span>
+        <input type="number" min="0" max="2000" step="500" maxlength="" required>
+    </div> -->
+    <!-- <div>
+        <span>每天運動時間</span>
+        <input type="range"  id="range" min="1" max="24" step="0.5" required>
+        <span id="span_text">小時</span>
+    </div> -->
+    <div>
+        <input type="reset"value="重寫" >
+        <p><input type="submit" value="送出"></p> 
+    </div>
+    <script>
+        const range = document.getElementById('range');
+        const spanText = document.getElementById('span_text');
+        range.onchange = function(){
+            spanText.innerHTML = range.value;
+        }
+    </script>
+</body>
+</html>

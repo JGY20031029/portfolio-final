@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歐亞水獺介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: darkkhaki;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        .image-container {
+            width: 50%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-container {
+            width: 50%;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: chocolate;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<script>
+    function playSound() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+    </script>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h1>歐亞水獺介紹</h1>
+            
+
+            <p>歐亞水獺（學名：Lutra lutra），或簡稱水獺，是分布於亞洲及歐洲的一種水獺，屬食肉目鼬科水獺屬。棲息在淡水環境。牠們與北美水獺不同的是頸部較短、臉面較闊、耳朵相距較遠及尾巴較長。歐亞水獺的平均壽命約為五年。</p>
+            <button onclick="goBack()">Back</button>
+        </div>
+        <div class="image-container">
+            <img src="歐亞水獺.jpg" alt="歐亞水獺">
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

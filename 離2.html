@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珠光裳鳳蝶介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: darkkhaki;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+        .image-container {
+            width: 50%;
+            max-height: 400px;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .text-container {
+            width: 50%;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: chocolate;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<script>
+    function playSound() {
+        var audio = document.getElementById("myAudio");
+        audio.play();
+    }
+    </script>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h1>珠光裳鳳蝶介紹</h1>
+            
+
+            <p>珠光裳鳳蝶（學名：Troides magellanus，英文俗名：Magellan Birdwing，別名：珠光鳳蝶、珠光黃裳鳳蝶、螢光翼鳳蝶、麥哲倫鳥翼蝶）在台灣以外漢語使用地區又名熒光裳鳳蝶，是屬於鳳蝶科的一種蝴蝶，是裳鳳蝶屬的一種，並演化出2個亞種。此物種受到不同法例及名錄保護。
+分佈範圍局限於菲律賓及台東蘭嶼之低海拔地區。模式產地為菲律賓北部之巴布煙群島及呂宋島。成蟲全年可見，飛行形態華美觸目，愛訪花。雄雌異形。幼蟲的寄主為有毒性的馬兜鈴科馬兜鈴屬各種植物
+</p>
+            <button onclick="goBack()">Back</button>
+        </div>
+        <div class="image-container">
+            <img src="珠光鳳蝶.jpg" alt="珠光鳳蝶 ">
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+</body>
+</html>

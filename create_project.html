@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>發起專案</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css" />
+    <style>
+        
+        .dropzone {
+            border: 2px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>發起專案</h1>
+        <nav>
+            <ul>
+                <li><a href="首頁.html">首頁</a></li>
+                <li><a href="campaigns.html">募款活動</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+                <li><a href="create_project.html">發起專案</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="create-project">
+            
+            <h2>發起您的專案</h2>
+            <form id="createProjectForm" class="dropzone">
+                <div class="form-group">
+                    <label for="organizationPhoto">提案單位照片<span style="color: red;">*</span></label>
+                    <div id="dropzone" class="dropzone"></div>
+                </div>
+                <div class="form-group">
+                    <label for="organizationName">提案單位名稱<span style="color: red;">*</span></label>
+                    <input type="text" id="organizationName" name="organizationName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactName">聯絡人姓名<span style="color: red;">*</span></label>
+                    <input type="text" id="contactName" name="contactName" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">聯絡人電話<span style="color: red;">*</span></label>
+                    <input type="tel" id="contactPhone" name="contactPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">聯絡E-mail<span style="color: red;">*</span></label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="websiteLink">網站連結</label>
+                    <input type="url" id="websiteLink" name="websiteLink">
+                </div>
+                <div class="form-group">
+                    <label for="idNumber">身分證字號/統一編號<span style="color: red;">*</span></label>
+                    <input type="text" id="idNumber" name="idNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="introduction">自我介紹<span style="color: red;">*</span></label>
+                    <textarea id="introduction" name="introduction" rows="4" required></textarea>
+                </div>
+                <button type="submit">下一步</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 募款平台. 保留所有權利.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+    <script src="create_project.js"></script>
+</body>
+</html>

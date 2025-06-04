@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>募款活動</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <header>
+        <h1>募款平台</h1>
+        <nav>
+            <ul>
+                <li><a href="首頁.html">首頁</a></li>
+                <li><a href="campaigns.html">募款活動</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+                <li><a href="create_project.html">發起專案</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="campaigns">
+            <h2>募款活動</h2>
+            <input type="text" id="searchInput" placeholder="搜尋動物或關鍵字..." onkeyup="filterCampaigns()">
+            <div class="campaign" data-name="赤腹游蛇改列瀕臨絕種 生態服務給付計畫鼓勵友善耕作社區參與" data-keywords="保育 赤腹游蛇 瀕臨絕種 生態 保護" data-goal="100000" data-raised="50000">
+                <h3>提升保育等級 赤腹游蛇改列瀕臨絕種 生態服務給付計畫鼓勵友善耕作社區參與</h3>
+                <p>透過大家的慷慨捐助，我們將能夠支持保育工作的第一線守護者，在保育成本方面分擔農民或在地居民的負擔，讓他們能夠更輕鬆地履行計畫。</p>
+                <p>目標金額：NT$100,000</p>
+                <p>已籌金額：<span class="raised-amount">50,000</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <button onclick="donate()">捐款</button>
+            </div>
+            <div class="campaign" data-name="國土生態保育綠色網絡建置計畫" data-keywords="國土生態保育綠色網絡建置計畫" data-goal="200000" data-raised="120000">
+                <h3>國土生態保育綠色網絡建置計畫</h3>
+                <p></p>
+                <p>目標金額：NT$200,000</p>
+                <p>已籌金額：<span class="raised-amount">120,000</span></p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+                <button onclick="donate()">捐款</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 募款平台. 保留所有權利.</p>
+    </footer>
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDonationModal()">&times;</span>
+            <h2>捐款</h2>
+            <form id="donationForm">
+                <label for="campaignSelect">選擇募款活動：</label>
+                <select id="campaignSelect" name="campaignSelect">
+                    <option value="赤腹游蛇改列瀕臨絕種 生態服務給付計畫鼓勵友善耕作社區參與">赤腹游蛇改列瀕臨絕種 生態服務給付計畫鼓勵友善耕作社區參與</option>
+                    <option value="國土生態保育綠色網絡建置計畫">國土生態保育綠色網絡建置計畫</option>
+                </select>
+                <label for="donationAmount">捐款金額 (NT$)：</label>
+                <input type="number" id="donationAmount" name="donationAmount" min="1" required>
+                <button type="submit">確認捐款</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
